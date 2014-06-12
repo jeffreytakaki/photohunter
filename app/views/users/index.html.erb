@@ -1,0 +1,24 @@
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html.erb</p>
+<div x-ng-app="PhotoHuntApp">
+	<div x-ng-controller="userCtlr">
+
+		<div x-ng-repeat="u in users">
+			{{u.username}}
+			<div x-ng-repeat="p in u.photos"> 
+			{{p.name}}	
+			</div>
+		</div>
+
+		<div x-ng-repeat="g in groups">
+			{{g.name}}
+			<div x-ng-repeat="u in g.users"> 
+			{{u.name}}	
+			<div x-ng-repeat="p in u.photos">
+				{{p.name}}
+			</div>
+			</div>
+		</div>
+
+	</div>
+	</div>
